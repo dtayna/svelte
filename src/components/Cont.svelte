@@ -1,7 +1,7 @@
-<script lang="ts">
-  export let statement: string = "Conteúdo do TAB";
+<p>{ statement }</p>
+
+
+<script >
+  export let statement = "Conteúdo do TAB";
 </script>
 
-<div class="contpane">
-<p>{ statement }</p>
-</div>

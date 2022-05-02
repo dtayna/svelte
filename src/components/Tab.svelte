@@ -1,18 +1,19 @@
 <div class="questionPane">
-	<button on:selection={e=> onSelection(0)}>
+	<button on:click={e=> onSelection(0)}>
 		TAB1
 	</button>
-	<button on:selection={e=> onSelection(1)}>
+	<button on:click={e=> onSelection(1)}>
 		TAB2
 	</button>
-	<button on:selection={e=> onSelection(2)}>
+	<button on:click={e=> onSelection(2)}>
 		TAB3
 	</button>
-	<button on:selection={e=> onSelection(3)}>
+	<button on:click={e=> onSelection(3)}>
 		TAB4
 	</button>
-
-	<Question {...conts[currentCont]} />
+	<div class="conteudo">
+		<Cont {...conts[currentCont]} />
+	</div>
 </div>
 
 
@@ -37,8 +38,18 @@
 
 		let currentCont = 0;
 
-		function onSelection(option) {
-		  currentCont = option;
-		  console.log(`opção selecionada ${option}`);
+		function onSelection(x) {
+		  currentCont = x;
+		  console.log(`opção selecionada ${x}`);
 		}
 </script>
+
+<style>
+		.conteudo {
+		  padding: 20px;
+		  margin: 10px 0;
+		  border-radius: 10px;
+		  border: 1px solid #aaa;
+		  background-color: #f0f0f0;
+		}
+</style>
